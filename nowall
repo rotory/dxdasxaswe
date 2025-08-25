@@ -1,0 +1,20 @@
+arr = {}
+for i,v in pairs(workspace:GetDescendants()) do
+    if v.Name == "structure base home" and v.Size == Vector3.new(45, 16.999996185302734, 2) then
+        v.Transparency = .7
+        table.insert(arr, v)
+    elseif v.Name == "structure base home" and v.Size == Vector3.new(45, 44.999996185302734, 2) then
+        v.Transparency = .7
+         table.insert(arr, v)
+    elseif v.Name == "Decoration" and v.Parent.Name == "Decorations" then
+        v.Transparency = .7
+        v.Parent.Part.Transparency = .7
+         table.insert(arr, v)
+    end
+end
+
+while task.wait(1) do
+    for i,v in arr do
+        v.Transparency = .7
+    end
+end
